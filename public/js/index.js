@@ -17,7 +17,7 @@ wForm.addEventListener('submit',(e)=>{
     msg.textContent = 'Loading... Please wait!'
     console.log(location)
     if(location){
-        fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+        fetch('/weather?address='+location).then((response)=>{
             response.json().then((data)=>{
                 if(data.error){
                     msg.style.color ='red';
